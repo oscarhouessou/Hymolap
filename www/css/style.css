@@ -1,0 +1,445 @@
+/*==================== GOOGLE FONTS ====================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+
+:root {
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 245;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 82%, 67%);
+    --white: #fff;
+    --black: #000;
+    --light: #F2F2F2;
+    --dark: #222;
+    --maron: #a80;
+    --red: #FF5246;
+    --orange: #FFA446;
+    --green: #5A9F69;
+    --light-hight: #aaa;
+    --first-color-second: hsl(141, 85%, 52%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: #FFF;
+    --container-color: var(--white);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 800;
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+/* Font size for large devices */
+
+@media screen and (min-width: 968px) {
+     :root {
+        --big-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*==================== BASE ====================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: var(--body-font);
+    margin: 0px;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+body {
+    margin: 0 0 0 0 !important;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+label {
+    color: var(--text-color);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.text-italic- {
+    font-style: italic !important;
+}
+
+.bg-light- {
+    background-color: var(--light);
+}
+
+.bg-light-hight- {
+    background-color: var(--light-hight);
+}
+
+.bg-dark- {
+    background-color: var(--dark) !important;
+}
+
+.bg-tcolor- {
+    background-color: var(--text-color);
+}
+
+.bg-primary- {
+    background-color: var(--first-color) !important;
+}
+
+.bg-second- {
+    background-color: var(--first-color-second) !important;
+}
+
+.bg-orange- {
+    background-color: var(--orange) !important;
+}
+
+.bg-red- {
+    background-color: var(--red) !important;
+}
+
+.bg-green- {
+    background-color: var(--green) !important;
+}
+
+.bg-white- {
+    background-color: var(--white) !important;
+}
+
+.bg-black- {
+    background-color: var(--black) !important;
+}
+
+.text-primary- {
+    color: var(--first-color) !important;
+}
+
+.text-black- {
+    color: var(--black);
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-white- {
+    color: var(--white);
+}
+
+.text-red- {
+    color: var(--red) !important;
+}
+
+.text-second- {
+    color: var(--first-color-second) !important;
+}
+
+.text-orange- {
+    color: var(--orange);
+}
+
+.text-green- {
+    color: var(--green);
+}
+
+.text-color- {
+    color: var(--text-color) !important;
+}
+
+.text-1 {
+    font-size: 24px;
+}
+
+.text-2 {
+    font-size: 22px;
+}
+
+.text-3 {
+    font-size: 20px;
+}
+
+.text-4 {
+    font-size: 17px;
+}
+
+.text-5 {
+    font-size: 14px;
+}
+
+.text-6 {
+    font-size: 12px;
+}
+
+.text-ue {
+    font-size: 10px;
+}
+
+.text-7 {
+    font-size: 9px;
+}
+
+.text-lighter {
+    font-weight: 300;
+}
+
+.transition {
+    transition: all 0.2s;
+}
+
+.set-opacity:hover {
+    opacity: 0.8 !important;
+}
+
+table tr {
+    border-bottom: 0.1px solid #ddd !important;
+    font-size: var(--small-font-size);
+    color: var(--black);
+}
+
+table tr i.delete:focus,
+table tr i.delete:hover {
+    color: var(--red);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.text-ascender {
+    font-family: 'AscenderSansMnW01-Regular' !important
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-1000 {
+    font-weight: 1000;
+}
+
+
+/*==================== BUTTONS ====================*/
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white);
+    padding: 4px 15px;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    font-weight: var(--font-medium);
+}
+
+.button:hover {
+    background-color: var(--first-color-alt)
+}
+
+.btn- {
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    transition: all 0.3s;
+    font-weight: var(--font-medium);
+}
+
+.btn-:hover {
+    opacity: 0.8 !important;
+}
+
+.button-outline-danger {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--red);
+    padding: 4px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-weight: var(--font-medium);
+}
+
+.button-outline-danger:hover,
+.button-outline-danger:focus {
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: var(--font-medium);
+}
+
+
+/****************** INPUT ******************/
+
+input.form-control-,
+select.form-control- {
+    border: 0.05px solid #ccc;
+    width: 100%;
+    padding: 5px;
+    height: 35px;
+    font-size: 15px;
+    color: var(--text-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: sans-serif;
+    outline-color: var(--black);
+}
+
+input.form-control-:focus,
+select.form-control-:focus,
+textarea.form-control-:focus {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    outline-color: var(--first-color);
+}
+
+
+/* input.form-control-primary,
+select.form-control-primary,
+input.form-control-primary:focus,
+select.form-control-primary:focus {
+    color: var(--white);
+    padding: 8px !important;
+    font-size: 14px !important;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    border: var(--white);
+    width: 100%;
+    border: 1px solid var(--black);
+} */
+
+textarea.form-control- {
+    border: 0.05px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--text-color);
+    border-radius: 1px;
+    outline-color: var(--black);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+/************* MY OWN CONTAINER ************/
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1170px;
+    }
+}
