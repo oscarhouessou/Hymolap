@@ -1,6 +1,6 @@
 # ModHyLog : Progiciel de Modélisation Pluie-Débit
 
-![ModHyLog Home](hymola_home.png)
+![ModHyLog Home](hymolap_home.png)
 
 ## Description
 
